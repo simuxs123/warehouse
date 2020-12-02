@@ -1,0 +1,28 @@
+$table-cell-padding:.5rem .75rem;
+$list-group-bg:rgb(245, 241, 228);
+$nav-tabs-link-active-bg:$list-group-bg;
+$link-color:rgb(133, 98, 98);
+.table {
+    background-color: rgb(245, 241, 228);
+}
+.tab-content {
+    background-color:$list-group-bg;
+    padding:1rem;
+}
+.error {
+    font-size: 12px;
+    margin-top:-10px;
+}
+.list-position {   
+        align-self: center;
+        flex: 1 0 0;
+}
+a svg {
+    width: 25px;
+}
+.header {
+    h3{
+        flex:1 0 0;
+    }
+}
+@import "node_modules/bootstrap/scss/bootstrap";
