@@ -35,7 +35,7 @@ export const New = () => {
             quantityHistory:[]
         }
         addProduct(newProduct);
-        history.push('/products')
+        history.push('/')
     }
     }
     const handleChange=(e)=>{
@@ -104,7 +104,7 @@ export const New = () => {
                     <FormGroup row>
                         <Col >
                         <Button type="submit">Save</Button>
-                        <Link className="btn btn-danger ml-2" to="/products">Cancel</Link>    
+                        <Link className="btn btn-danger ml-2" to="/">Cancel</Link>    
                         </Col>
                     </FormGroup>
                     </Form>   

@@ -36,7 +36,7 @@ export const Edit = (props) => {
     };
     const handleEdit=()=>{
         editProduct(selectedProduct)
-        history.push('/products')
+        history.push('/')
     }
        
     const handleChange=(e)=>{
@@ -105,7 +105,7 @@ export const Edit = (props) => {
                     <FormGroup row>
                         <Col >
                         <Button onClick={toggle}>Edit</Button>
-                        <Link className="btn btn-danger ml-2" to="/products">Cancel</Link>    
+                        <Link className="btn btn-danger ml-2" to="/">Cancel</Link>    
                         </Col>
                         <Modale toggle={toggle} modal={modal} handleEdit={handleEdit}/>
                     </FormGroup>

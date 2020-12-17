@@ -1,5 +1,5 @@
 import React,{createContext,useReducer,useEffect} from "react"
-import AppReducer from './AppReducer'
+import {AppReducer} from './AppReducer'
 const initialState={
     products:[
         {id:"labas",name:"headphones",ean:"12736749",type:"electronic", weight:"20.6", color:"red",quantity:"5",price:"5.6",active:false,priceHistory:[],quantityHistory:[]},

@@ -16,7 +16,7 @@ export const Header = () => {
     return (
         <Navbar color='dark' dark>
             <Container>
-                <NavbarBrand href="/products">Product list</NavbarBrand>
+                <NavbarBrand href="/">Product list</NavbarBrand>
                 <Nav>
                     <NavItem>
                         <Link className="btn btn-primary ml-2" to="/products/create">Add product<FaPlus/></Link> 

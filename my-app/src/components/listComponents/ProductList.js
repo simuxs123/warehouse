@@ -10,7 +10,7 @@ export const ProductList = () => {
     const {searchProduct,searchW,products,removeProduct,disabledProduct,isSearchActive,foundProducts}=useContext(GlobalContext);
     const [filteredProducts,setFilteredProducts]=useState([]);
     const [currentPage,setCurrentPage]=useState(1);
-    const [productsPerPage]=useState(5);
+    const [productsPerPage]=useState(10);
     const indexOfLastPost=currentPage*productsPerPage;
     const indexOfFirstPost=indexOfLastPost-productsPerPage;
     const currentProducts=filteredProducts.slice(indexOfFirstPost,indexOfLastPost);
@@ -21,7 +21,7 @@ export const ProductList = () => {
     useEffect(()=>{      
         setFilteredProducts(isSearchActive?foundProducts:products);
         foundProducts.length<=productsPerPage?setCurrentPage(1):setCurrentPage(currentPage)
-    },[isSearchActive,products,foundProducts])
+    },[isSearchActive,products,foundProducts,productsPerPage,currentPage])
     
     const handleBtn=(id)=>{
         removeProduct(id)
@@ -64,7 +64,7 @@ export const ProductList = () => {
                                 </td>
                                 <td>
                                    <Disable disabled={item.active}>
-                                        <Link className=" text-danger" to="#!" onClick={()=>handleBtn(item.id)}><FaTrashAlt/></Link>
+                                        <Link className=" text-danger" to="/" onClick={()=>handleBtn(item.id)}><FaTrashAlt/></Link>
                                         <Link className="ml-lg-2 text-warning" to={`/products/edit/${item.id}`}><FaEdit/></Link>
                                         <Link className="ml-lg-2 text-success" to={`/products/${item.id}`}><FaSearch/></Link>
                                     </Disable>

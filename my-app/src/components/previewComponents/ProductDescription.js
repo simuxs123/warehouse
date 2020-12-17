@@ -10,7 +10,7 @@ export const ProductDescription = ({name,ean,type,weight,color,quantity,price}) 
             <div className="py-2"><strong>Color</strong>: {color} </div> 
             <div className="py-2"><strong>Quantity</strong>: {quantity} </div> 
             <div className="py-2"><strong>Price</strong>: {price}$ </div> 
-            <Link className="btn btn-success" to="/products">Go back</Link>  
+            <Link className="btn btn-success" to="/">Go back</Link>  
         </div>
     )
 }
